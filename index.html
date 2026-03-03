@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F.I.E.R.T.É Retrouvée | Retrouvez votre énergie sans tout quitter</title>
+<meta name="description" content="Vous vous réveillez à 5h sans alarme ? Votre cerveau est bloqué en mode survie. Découvrez le Protocole Neuro-Restauration F.I.E.R.T.É pour retrouver votre énergie professionnelle en 6 semaines, sans démissionner.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="F.I.E.R.T.É Retrouvée | Victor-Alex ANACLET">
+<meta property="og:description" content="Épuisement professionnel : désactivez le mode survie. Protocole Neuro-Restauration pour retrouver votre énergie en 6 semaines, sans tout quitter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js-enabled');</script>
+<style>
+/* ==========================================
+   TOKENS — BRANDING ORIGINEL (BLANC, BLEU NUIT, ORANGE EXPLOSIF)
+   ========================================== */
+:root{
+  --navy:#2b3543;
+  --navy-dark:#242c38;
+  --orange:#f26722;
+  --orange-dim:#d95a1c;
+  --cream:#f8f9fa;
+  --bg1:#ffffff;
+  --text:#4b5563;
+  --text-bright:#1f2937;
+  --text-muted:#9ca3af;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --radius:12px;--radius-sm:8px;
+  --f-color:#C0392B;--i-color:#E67E22;--e-color:#F1C40F;
+  --r-color:#27AE60;--t-color:#2980B9;--é-color:#8E44AD;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg1);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--orange);text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:960px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.5rem)}
+.accent{color:var(--orange)}
+.dim{color:var(--text-muted)}
+strong{color:var(--text-bright);font-weight:600}
+
+/* ==========================================
+   NAV
+   ========================================== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(43,53,67,.98);backdrop-filter:blur(16px);padding:.8rem 0;transition:padding .3s}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav__logo{font-family:var(--serif);font-size:1.4rem;font-weight:900;color:#ffffff;letter-spacing:.02em}
+.nav__logo span{color:var(--orange)}
+.nav__cta{font-size:.75rem;font-weight:600;color:#ffffff;background:var(--orange);padding:.5rem 1.2rem;border-radius:4px;transition:all .3s;text-transform:uppercase;letter-spacing:.05em}
+.nav__cta:hover{background:var(--orange-dim)}
+.nav__sub{font-size:.6rem;color:rgba(255,255,255,.6);font-weight:400;letter-spacing:.08em;display:block;margin-top:-2px}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn{display:inline-block;font-family:var(--sans);font-weight:600;border-radius:6px;cursor:pointer;transition:all .3s;text-align:center;border:none}
+.btn--primary{background:var(--orange);color:#ffffff;padding:.9rem 2.2rem;font-size:.95rem;box-shadow:0 4px 15px rgba(242,103,34,.3)}
+.btn--primary:hover{background:var(--orange-dim);transform:translateY(-2px);box-shadow:0 6px 20px rgba(242,103,34,.4)}
+.btn--ghost{color:var(--text-bright);border:1px solid rgba(0,0,0,.15);padding:.8rem 1.6rem;font-size:.9rem;background:transparent}
+.btn--ghost:hover{background:rgba(242,103,34,.08);border-color:var(--orange);color:var(--orange)}
+
+/* ==========================================
+   SECTIONS & CONTRASTES
+   ========================================== */
+.section{padding:clamp(4rem,8vh,7rem) 0}
+#solution { padding-bottom: clamp(1.5rem, 4vh, 2.5rem); }
+#pourquoi { padding-top: clamp(1.5rem, 4vh, 2.5rem); }
+.section#temoignages { padding-bottom: clamp(2.5rem, 5vh, 4rem); }
+.section#faq { padding-bottom: clamp(2.5rem, 5vh, 4rem); }
+.section#mc { padding-top: clamp(2.5rem, 5vh, 4rem); }
+.section--alt, .section--dark {background:var(--navy); color:#ffffff;}
+
+.section--alt .section-header__title, .section--dark .section-header__title,
+.section--alt h2, .section--dark h2 { color:#ffffff !important; }
+.section--alt p, .section--dark p,
+.section--alt .dim, .section--dark .dim { color:rgba(255,255,255,.8) !important; }
+.section--alt strong, .section--dark strong { color:#ffffff !important; }
+.section--alt .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.3); }
+.section--alt .btn--ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+.section-header{text-align:center;margin-bottom:clamp(2rem,4vw,3rem)}
+.section-header__kicker{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);margin-bottom:.5rem}
+.section-header__title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:900;color:var(--text-bright);line-height:1.2}
+
+/* ==========================================
+   HERO
+   ========================================== */
+.hero{padding-top:clamp(7rem,14vh,10rem);padding-bottom:clamp(3rem,6vh,5rem);text-align:center;position:relative;background:var(--bg1)}
+.hero__kicker{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);margin-bottom:1.5rem}
+.hero__title{font-family:var(--serif);font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--text-bright);line-height:1.1;margin-bottom:1.2rem;max-width:800px;margin-left:auto;margin-right:auto}
+.hero__title em{font-style:italic;color:var(--orange);font-weight:400;display:block;margin-top:.5rem}
+.hero__sub{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--text);max-width:650px;margin:0 auto 2.5rem;line-height:1.7}
+.hero__badges{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.hero__badge{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:.35rem}
+.hero__buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+
+/* ==========================================
+   STATS BAR
+   ========================================== */
+.stats{background:var(--navy);padding:2.5rem 0;position:relative}
+.stats::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--r-color),var(--t-color),var(--é-color))}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;align-items:center}
+.stats__num{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#ffffff;line-height:1}
+.stats__label{font-size:.7rem;color:rgba(255,255,255,.7);margin-top:.5rem;line-height:1.4;text-transform:uppercase;letter-spacing:.05em}
+
+/* ==========================================
+   PROBLÈME
+   ========================================== */
+.problem__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.problem__list{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.problem__item{font-size:.9rem;color:var(--text);padding:.8rem 1rem;background:rgba(242,103,34,.05);border-left:3px solid var(--f-color);border-radius:0 var(--radius-sm) var(--radius-sm) 0;line-height:1.5;transition:all .3s}
+.problem__item:hover{background:rgba(242,103,34,.1);transform:translateX(5px)}
+.problem__item span{color:var(--text-muted);font-size:.8rem}
+.problem__closer{margin-top:1.5rem;font-size:1rem;line-height:1.7;color:var(--text-bright)}
+
+/* ==========================================
+   3E VOIE
+   ========================================== */
+.solution__grid{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:1.5rem;align-items:stretch}
+.solution__card{background:var(--navy-dark);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:all .4s}
+.solution__card--no{opacity:.7}
+.solution__card--meh{opacity:.7}
+.solution__card--yes{background:#ffffff;border:3px solid var(--orange);box-shadow:0 15px 40px rgba(0,0,0,.4);transform:scale(1.05);z-index:10}
+.solution__icon{font-size:2rem;margin-bottom:1rem;display:block}
+.solution__card--yes h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:.5rem;color:var(--text-bright) !important;font-weight:900}
+.solution__card--yes p{color:var(--text) !important;font-size:.9rem}
+.solution__card--yes .solution__stack{margin-top:1.2rem;text-align:left;font-size:.85rem;color:var(--text) !important;line-height:1.7}
+.solution__card--yes .solution__stack-item{display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.4rem;color:var(--text) !important;}
+.solution__card--yes .solution__stack-item::before{content:'✓';color:var(--orange);font-weight:900;flex-shrink:0}
+.solution__card--no h3, .solution__card--meh h3 {font-family:var(--serif);font-size:1.3rem;margin-bottom:.5rem;color:#ffffff;font-weight:700}
+
+/* ==========================================
+   VALUE EQUATION
+   ========================================== */
+.veq__grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem}
+.veq__card{background:var(--navy-dark);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:1.8rem 1.5rem;transition:all .3s}
+.veq__card:hover{border-color:var(--orange);transform:translateY(-4px)}
+.veq__card-icon{font-size:1.8rem;margin-bottom:.8rem;display:block}
+.veq__card-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);font-weight:700;margin-bottom:.4rem}
+.veq__card h3{font-family:var(--serif);font-size:1.3rem;font-weight:900;color:#ffffff !important;margin-bottom:.6rem}
+.veq__card p{font-size:.85rem;color:rgba(255,255,255,.8) !important;line-height:1.6}
+.veq__card--highlight{border-color:var(--orange);background:rgba(242,103,34,.05)}
+.veq__equation{text-align:center;margin:2.5rem 0 1rem;padding:1.5rem;background:var(--navy-dark);border:1px solid var(--orange);border-radius:var(--radius);max-width:650px;margin-left:auto;margin-right:auto}
+.veq__formula{font-family:var(--serif);font-size:clamp(1.1rem,3vw,1.6rem);color:#ffffff;font-weight:900;line-height:1.5}
+.veq__formula-top{color:var(--orange)}
+.veq__formula-bottom{color:rgba(255,255,255,.9)}
+.veq__formula-bar{display:block;height:2px;background:rgba(255,255,255,.5);margin:.8rem auto;width:80%;max-width:400px}
+.veq__caption{font-size:.75rem;color:rgba(255,255,255,.6) !important;text-align:center;margin-top:.8rem;font-style:italic}
+
+/* ==========================================
+   ROUE / DIAGNOSTIC
+   ========================================== */
+.diagnostic__layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.diagnostic__title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:900;color:var(--text-bright);margin-bottom:.5rem}
+.diagnostic__sub{font-size:1rem;color:var(--text-muted);margin-bottom:2rem}
+.diag__feature{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.diag__feature-icon{font-size:1.3rem;flex-shrink:0;margin-top:.1rem}
+.diag__feature strong{display:block;color:var(--text-bright);font-size:.95rem;margin-bottom:.2rem}
+.diag__feature p{font-size:.85rem;color:var(--text);line-height:1.6}
+
+.roue-wrap{display:flex;justify-content:center;align-items:center}
+.roue-svg{width:100%;max-width:340px}
+.roue-letter{font-family:var(--serif);font-weight:900;font-size:20px;fill:var(--bg1)}
+.roue-label{font-family:var(--sans);font-size:8.5px;fill:var(--text-muted);font-weight:600;letter-spacing:.05em}
+.roue-center{font-family:var(--serif);font-weight:900;font-size:11px;fill:var(--text-bright)}
+
+/* ==========================================
+   STORY
+   ========================================== */
+.story__grid{display:grid;grid-template-columns:.8fr 1fr;gap:4rem;align-items:center}
+.story__photo{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:var(--navy-dark);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.story__photo img{width:100%;height:100%;object-fit:cover}
+.story__photo-tag{position:absolute;bottom:0;right:0;padding:.8rem 1.2rem;background:var(--orange);font-size:.75rem;color:#ffffff;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:var(--radius) 0 0 0;}
+.story__content h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:900;color:#ffffff !important;margin-bottom:1.5rem;line-height:1.3}
+.story__content h2 em{font-style:italic;color:var(--orange);font-weight:400}
+.story__content p{font-size:.95rem;color:rgba(255,255,255,.8) !important;line-height:1.8;margin-bottom:1.2rem}
+.story__sig{font-family:var(--serif);font-style:italic;color:var(--orange);font-size:1.2rem;margin-top:2rem;font-weight:600}
+
+/* ==========================================
+   TÉMOIGNAGES
+   ========================================== */
+.testi__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testi__card{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column;gap:1rem;transition:all .4s;box-shadow:0 10px 30px rgba(0,0,0,.03)}
+.testi__card:hover{border-color:var(--orange);transform:translateY(-5px);box-shadow:0 15px 35px rgba(242,103,34,.1)}
+.testi__stars{color:var(--e-color);font-size:.9rem;letter-spacing:.1em}
+.testi__text{font-size:.85rem;color:var(--text);line-height:1.7;flex:1;font-style:italic}
+.testi__author{display:flex;align-items:center;gap:.8rem;margin-top:.5rem}
+.testi__avatar{width:36px;height:36px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;font-size:.9rem;color:#ffffff}
+.testi__name{font-size:.85rem;font-weight:700;color:var(--text-bright)}
+
+/* ==========================================
+   3 PORTES
+   ========================================== */
+.doors__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.door{background:var(--navy-dark);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:2.5rem 1.5rem;text-align:center;transition:all .4s;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.door::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;}
+.door:nth-child(1)::before{background:var(--r-color)}
+.door:nth-child(2)::before{background:var(--orange)}
+.door:nth-child(3)::before{background:var(--é-color)}
+.door:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.2)}
+.door__icon{font-size:2.2rem;margin-bottom:1rem}
+.door__title{font-family:var(--sans);font-size:1.1rem;font-weight:500;color:#ffffff !important;margin-bottom:.8rem}
+.door__desc{font-size:.85rem;color:rgba(255,255,255,.7) !important;line-height:1.6;margin-bottom:1.5rem;min-height: 80px;}
+.door__tag{font-size:.7rem;color:rgba(255,255,255,.5) !important;letter-spacing:.05em}
+
+/* ==========================================
+   FAQ
+   ========================================== */
+.faq__list{max-width:750px;margin:0 auto;display:flex;flex-direction:column;gap:.8rem}
+.faq__item{background:#ffffff;border:1px solid rgba(0,0,0,.08);border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.02)}
+.faq__q{padding:1.2rem 1.5rem;font-weight:600;font-size:.95rem;color:var(--text-bright);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq__q::after{content:'+';font-size:1.4rem;color:var(--orange);transition:transform .3s}
+.faq__item.open .faq__q::after{transform:rotate(45deg)}
+.faq__a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 1.5rem;font-size:.9rem;color:var(--text);line-height:1.7}
+.faq__item.open .faq__a{max-height:400px;padding:0 1.5rem 1.2rem}
+
+/* ==========================================
+   CTA FINAL
+   ========================================== */
+.final-cta{text-align:center;position:relative}
+.countdown{display:flex;gap:1rem;justify-content:center;margin:2rem 0 2.5rem}
+.countdown__block{text-align:center; background:rgba(255,255,255,0.05); padding: 1.2rem 1.5rem; border-radius: 12px; min-width:85px; border:1px solid rgba(255,255,255,0.02)}
+.countdown__num{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--orange);line-height:1}
+.countdown__label{font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.6);margin-top:.5rem}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer{background:var(--navy-dark);padding:3rem 0;text-align:center;border-top:1px solid rgba(255,255,255,.05)}
+.footer__sig{font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,.8);margin-bottom:.5rem}
+.footer__sig strong{color:var(--orange)}
+.footer__legal{font-size:.7rem;color:rgba(255,255,255,.4)}
+.footer__social{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem 0}
+.footer__social a{font-size:.8rem;font-weight:600;color:var(--orange);transition:color .3s}
+.footer__social a:hover{color:#ffffff}
+
+/* ==========================================
+   REVEAL ANIMATIONS (OPTIMISÉ ZÉRO PAGE BLANCHE)
+   ========================================== */
+/* Par défaut, tout est visible et à sa place (Sécurité absolue) */
+.reveal { opacity: 1; transform: none; transition: opacity .8s ease, transform .8s ease; }
+/* Seulement si le Javascript a confirmé qu'il fonctionnait, on prépare l'animation */
+html.js-enabled .reveal { opacity: 0; transform: translateY(30px); }
+/* Quand on scrolle, l'élément redevient visible */
+html.js-enabled .reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-d1{transition-delay:.15s}.reveal-d2{transition-delay:.3s}.reveal-d3{transition-delay:.45s}.reveal-d4{transition-delay:.6s}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media(max-width:768px){
+  .stats__grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .problem__grid,.diagnostic__layout,.story__grid{grid-template-columns:1fr; gap: 2rem;}
+  .solution__grid{grid-template-columns:1fr;gap:1.5rem}
+  .solution__grid .solution__card--yes{order:-1; transform:none}
+  .veq__grid{grid-template-columns:1fr}
+  .testi__grid{grid-template-columns:1fr}
+  .doors__grid{grid-template-columns:1fr}
+  .countdown{gap:.5rem}
+  .countdown__block{padding: .8rem 1rem; min-width: 70px;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Victor-Alex ANACLET",
+      "jobTitle": "Expert en accompagnement professionnel"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "C'est pour qui exactement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour les professionnels de 40-55 ans qui sentent que quelque chose ne tourne plus rond — fatigue chronique, irritabilité, perte de sens — mais qui ne peuvent pas se permettre de « tout plaquer ». Tu as des responsabilités, un crédit, une famille. Tu as besoin d'une solution qui fonctionne dans TA réalité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "C'est quoi la différence avec un coach classique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un coach te dit « médite » et « lâche prise ». Moi, je t'explique POURQUOI ton amygdale déclenche des fausses alertes, POURQUOI ton cortex préfrontal n'arrive plus à prendre des décisions, et COMMENT recâbler ces circuits. C'est de la neuroscience appliquée, pas du développement personnel."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div>
+      <div class="nav__logo">F.I.E.R.T.<span>É</span></div>
+    </div>
+    <a href="https://roue-fierte.vercel.app" target="_blank" class="nav__cta">Diagnostic gratuit →</a>
+  </div>
+</nav>
+
+<section class="hero section">
+  <div class="container">
+    <div class="hero__kicker reveal">Protocole de Neuro-Restauration × Reconstruction professionnelle</div>
+    <h1 class="hero__title reveal reveal-d1">Retrouve ton énergie en 6 semaines. <em>Sans quitter ton poste.</em></h1>
+    <p class="hero__sub reveal reveal-d2">Tu te réveilles à 5h sans alarme. Tu tiens, mais <strong>ton corps t'alerte</strong>.<br>
+    Découvre en 3 minutes où le <strong>mode survie</strong> a frappé le plus fort — et les 3 actions neuroscientifiques pour en sortir.</p>
+    <div class="hero__buttons reveal reveal-d3">
+      <a href="https://roue-fierte.vercel.app" target="_blank" class="btn btn--primary">🔬 Faire mon diagnostic gratuit</a>
+      <a href="https://cal.com/victor-alex-anaclet-ngmsbj/30min" target="_blank" class="btn btn--ghost">Prendre RDV 30min →</a>
+    </div>
+    <div class="hero__badges reveal reveal-d4">
+      <span class="hero__badge">⏱ 3 minutes</span>
+      <span class="hero__badge">🔒 Confidentiel</span>
+      <span class="hero__badge">🧠 Basé sur les neurosciences</span>
+      <span class="hero__badge">✅ 100% gratuit</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="reveal">
+        <div class="stats__num">500+</div>
+        <div class="stats__label">Professionnels<br>accompagnés / an</div>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="stats__num">20+</div>
+        <div class="stats__label">Années<br>d'expérience terrain</div>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="stats__num">6</div>
+        <div class="stats__label">Semaines pour<br>retrouver ton énergie</div>
+      </div>
+      <div class="reveal reveal-d3">
+        <div class="stats__num">80%</div>
+        <div class="stats__label">Ont retrouvé leur énergie<br>sans quitter leur poste</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="probleme">
+  <div class="container">
+    <div class="problem__grid">
+      <div>
+        <div class="section-header" style="text-align:left">
+          <div class="section-header__kicker reveal">Le signal que tu ignores</div>
+          <h2 class="section-header__title reveal reveal-d1" style="text-align:left">Tu n'es pas faible.<br><span class="accent">Ton cerveau est resté en mode survie.</span></h2>
+        </div>
+        <p class="reveal reveal-d2" style="font-size:1rem;line-height:1.7;margin-bottom:1.2rem">Le SRA — ton Système Réticulaire Activateur — est censé filtrer les menaces. Mais quand tu encaisses depuis des mois, il reste bloqué en position <strong>« alerte permanente »</strong>. Résultat :</p>
+      </div>
+      <div>
+        <ul class="problem__list">
+          <li class="problem__item reveal">Tu te réveilles à 5h sans alarme <span>— cortisol en pic</span></li>
+          <li class="problem__item reveal reveal-d1">Tu fais le « bon petit soldat » <span>— surrégulation émotionnelle</span></li>
+          <li class="problem__item reveal reveal-d2">Tu tiens grâce au café et à la volonté <span>— le CPF s'épuise</span></li>
+          <li class="problem__item reveal reveal-d3">Tu souris en réunion — mais ton corps crie stop</li>
+          <li class="problem__item reveal reveal-d4">Tu penses « c'est normal, tout le monde vit ça »</li>
+          <li class="problem__item reveal">Ton médecin ne voit rien <span>— tes analyses sont « normales »</span></li>
+        </ul>
+        <p class="problem__closer reveal"><strong>Ce n'est pas normal.</strong> C'est le mode survie. Et il est en train d'user tes télomères, ton énergie, ta capacité à ressentir quoi que ce soit. Les neurosciences le prouvent — et elles montrent aussi <strong>comment en sortir</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="solution">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title reveal reveal-d1">Ni démissionner. Ni subir.<br><span class="accent">Désactiver le mode survie.</span></h2>
+    </div>
+    <div class="solution__grid">
+      <div class="solution__card solution__card--no reveal">
+        <span class="solution__icon">🚪</span>
+        <h3>Tout quitter</h3>
+        <p>Les coachs te disent « change de vie ». Mais tu as un crédit, des enfants, des responsabilités. Ce n'est pas une option. Pas maintenant.</p>
+      </div>
+      <div class="solution__card solution__card--yes reveal reveal-d1">
+        <span class="solution__icon">🧠</span>
+        <h3>La méthode F.I.E.R.T.É</h3>
+        <p>Un protocole en 6 axes calibrés sur les neurosciences. En 6 semaines tu reçois :</p>
+        <div class="solution__stack">
+          <div class="solution__stack-item">Diagnostic personnalisé (Roue F.I.E.R.T.É)</div>
+          <div class="solution__stack-item">Feuille de route personalisée sur-mesure</div>
+          <div class="solution__stack-item">Méthode ARIC pour chaque axe</div>
+          <div class="solution__stack-item">Micro-actions de 2 min/jour</div>
+          <div class="solution__stack-item">Accompagnement avec Victor-Alex</div>
+          <div class="solution__stack-item">Mesure avant/après (baseline de fierté)</div>
+        </div>
+        <p style="margin-top:1.2rem;font-size:.85rem;text-align:center;"><strong>Sans quitter ton poste.</strong></p>
+      </div>
+      <div class="solution__card solution__card--meh reveal reveal-d2">
+        <span class="solution__icon">😶</span>
+        <h3>Continuer à tenir</h3>
+        <p>C'est ce que tu fais depuis des mois. Ça fonctionne — jusqu'au jour où ton corps décide que c'est fini. Et ce jour arrive toujours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark value-eq" id="pourquoi">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header__kicker reveal" style="color:rgba(255,255,255,.6)">Ce n'est pas du coaching. C'est de la science.</div>
+      <h2 class="section-header__title reveal reveal-d1">Pourquoi 6 semaines <span class="accent">suffisent.</span></h2>
+    </div>
+
+    <div class="veq__grid">
+
+      <div class="veq__card veq__card--highlight reveal">
+        <span class="veq__card-icon">🎯</span>
+        <div class="veq__card-label"> Ce que tu obtiens</div>
+        <h3>Ton énergie revient</h3>
+        <p>Pas la motivation forcée. L'énergie naturelle. Celle qui fait que tu te réveilles sans cette boule au ventre. Nos accompagnés passent en moyenne de <strong>3.8/10 à 7.2/10</strong> sur la Roue F.I.E.R.T.É en 42 jours. C'est mesurable. C'est vérifiable. C'est ce qui t'attend.</p>
+      </div>
+
+      <div class="veq__card reveal reveal-d1">
+        <span class="veq__card-icon">🔬</span>
+        <div class="veq__card-label"> Pourquoi ça marche</div>
+        <h3>Calibré par les neurosciences</h3>
+        <p>Pas des opinions. Des mécanismes validés — neuroplasticité, régulation du cortisol, recâblage du cortex préfrontal. <strong>500+ professionnels</strong> accompagnés par an. <strong>20 ans</strong> de terrain en collectivités territoriales. Ce protocole a été testé sur des centaines de personnes qui avaient exactement ta situation.</p>
+      </div>
+
+      <div class="veq__card reveal reveal-d2">
+        <span class="veq__card-icon">⚡</span>
+        <div class="veq__card-label">Le délai </div>
+        <h3>42 jours. Pas 42 mois.</h3>
+        <p>La recherche en neuroplasticité montre qu'il faut <strong>21 à 42 jours</strong> pour que de nouveaux circuits neuronaux se stabilisent. Le programme F.I.E.R.T.É est calibré sur cette fenêtre exacte. Tu ne commences pas un processus de 2 ans — tu actives un changement mesurable en 6 semaines.</p>
+      </div>
+
+      <div class="veq__card reveal reveal-d3">
+        <span class="veq__card-icon">🪶</span>
+        <div class="veq__card-label">L'effort </div>
+        <h3>2 minutes par jour</h3>
+        <p>Pas de méditation d'une heure. Pas de journal de 3 pages. Des <strong>micro-actions de 2 minutes</strong>, conçues pour un cerveau épuisé. Parce que quand tu es en mode survie, tu n'as pas l'énergie de « faire un effort ». Le programme s'adapte à ton état réel, pas à un état idéal.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="diagnostic">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header__kicker reveal">Ton outil de diagnostic</div>
+      <h2 class="diagnostic__title reveal reveal-d1">La Roue de F.I.E.R.T.É</h2>
+      <p class="diagnostic__sub reveal reveal-d2">6 axes. 3 minutes. 1 vérité que personne ne t'a dite.</p>
+    </div>
+    <div class="diagnostic__layout">
+      <div class="roue-wrap reveal">
+        <svg class="roue-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <defs><filter id="gs"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity=".15"/></filter></defs>
+          <path d="M150,150 L150,30 A120,120 0 0,1 253.9,90 Z" fill="#C0392B" filter="url(#gs)"/>
+          <path d="M150,150 L253.9,90 A120,120 0 0,1 253.9,210 Z" fill="#E67E22" filter="url(#gs)"/>
+          <path d="M150,150 L253.9,210 A120,120 0 0,1 150,270 Z" fill="#F1C40F" filter="url(#gs)"/>
+          <path d="M150,150 L150,270 A120,120 0 0,1 46.1,210 Z" fill="#27AE60" filter="url(#gs)"/>
+          <path d="M150,150 L46.1,210 A120,120 0 0,1 46.1,90 Z" fill="#2980B9" filter="url(#gs)"/>
+          <path d="M150,150 L46.1,90 A120,120 0 0,1 150,30 Z" fill="#8E44AD" filter="url(#gs)"/>
+          <text x="170" y="72" class="roue-letter" text-anchor="middle">F</text>
+          <text x="228" y="155" class="roue-letter" text-anchor="middle">I</text>
+          <text x="200" y="235" class="roue-letter" text-anchor="middle">E</text>
+          <text x="100" y="235" class="roue-letter" text-anchor="middle">R</text>
+          <text x="72" y="155" class="roue-letter" text-anchor="middle">T</text>
+          <text x="120" y="72" class="roue-letter" text-anchor="middle">É</text>
+          <circle cx="150" cy="150" r="28" fill="var(--bg1)" stroke="var(--text-bright)" stroke-width="1.5"/>
+          <text x="150" y="147" class="roue-center" text-anchor="middle">F.I.E.R.T.É</text>
+          <text x="150" y="159" text-anchor="middle" style="font-size:6px;fill:var(--text-muted);font-family:var(--sans);font-weight:600;">diagnostic</text>
+          <text x="170" y="22" class="roue-label" text-anchor="middle">FAIRE LE POINT</text>
+          <text x="278" y="155" class="roue-label" text-anchor="start">IDENTIFIER</text>
+          <text x="218" y="275" class="roue-label" text-anchor="middle">EXPLORER</text>
+          <text x="82" y="275" class="roue-label" text-anchor="middle">RESTRUCTURER</text>
+          <text x="15" y="155" class="roue-label" text-anchor="start">TESTER</text>
+          <text x="120" y="22" class="roue-label" text-anchor="middle">ÉVOLUER</text>
+        </svg>
+      </div>
+      <div>
+        <div class="diag__feature reveal">
+          <span class="diag__feature-icon">🎯</span>
+          <div>
+            <strong>Ton axe prioritaire</strong>
+            <p>Identifie précisément où le mode survie a frappé le plus fort</p>
+          </div>
+        </div>
+        <div class="diag__feature reveal reveal-d1">
+          <span class="diag__feature-icon">🧠</span>
+          <div>
+            <strong>Explication neuroscientifique</strong>
+            <p>Comprends le mécanisme — SRA, amygdale, cortisol, CPF</p>
+          </div>
+        </div>
+        <div class="diag__feature reveal reveal-d2">
+          <span class="diag__feature-icon">⚡</span>
+          <div>
+            <strong>3 micro-actions calibrées</strong>
+            <p>Pas des généralités — 3 actions spécifiques pour TON profil</p>
+          </div>
+        </div>
+        <div class="diag__feature reveal reveal-d3">
+          <span class="diag__feature-icon">📊</span>
+          <div>
+            <strong>Feuille de route personnalisée</strong>
+            <p>Rapport personnalisé envoyé par email — ton plan d'action complet</p>
+          </div>
+        </div>
+        <div style="margin-top:2rem" class="reveal reveal-d4">
+          <a href="https://roue-fierte.vercel.app" target="_blank" class="btn btn--primary" style="font-size:1rem;padding:.9rem 2.5rem">🔬 Faire mon diagnostic F.I.E.R.T.E gratuit — 3 minutes</a>
+          <p class="dim" style="font-size:.75rem;margin-top:.8rem; margin-left: .5rem;">Aucune inscription requise. Résultats immédiats.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="story">
+  <div class="container">
+    <div class="story__grid">
+      <div class="story__photo reveal">
+        <img src="photo.png" alt="Victor-Alex ANACLET, Expert en accompagnement professionnel et créateur de la méthode F.I.E.R.T.É pour désactiver le mode survie au travail">
+        <div class="story__photo-tag">20+ ans de terrain</div>
+      </div>
+      <div class="story__content">
+        <h2 class="reveal">Octobre 2021.<br>Gustave Roussy.<br><em>Le signal ultime.</em></h2>
+        <p class="reveal reveal-d1">Pendant 20 ans, j'ai formé des centaines de cadres et managers dans les collectivités territoriales. J'étais le formateur qui parlait de performance, d'efficacité, de résultats.</p>
+        <p class="reveal reveal-d2"><strong>Puis mon corps m'a envoyé le signal que j'avais ignoré chez les autres.</strong> Gustave Roussy. Les examens. L'attente. Et cette vérité brutale : j'avais passé ma carrière à aider les gens à performer — sans jamais les aider à <strong>durer</strong>.</p>
+        <p class="reveal reveal-d3">Ce jour-là, ma mission a changé. Plus de « performance à tout prix ». Place à la reconstruction. J'ai plongé dans les neurosciences appliquées, les mécanismes du mode survie, la science de la récupération. Et j'ai créé la méthode F.I.E.R.T.É — pour que personne n'ait besoin d'attendre le signal ultime pour réagir.</p>
+        <div class="story__sig reveal reveal-d4">« Je t'aide à durer, pas à tenir. »</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="temoignages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header__kicker reveal">Ils ont retrouvé leur F.I.E.R.T.É</div>
+      <h2 class="section-header__title reveal reveal-d1">Ce n'est pas moi qui le dis.<br><span class="accent">Ce sont eux.</span></h2>
+    </div>
+    <div class="testi__grid">
+      <div class="testi__card reveal">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« J'avais souvent cette pensée : "je n'y arriverai jamais, à moins de tout quitter..." En suivant le parcours, j'ai découvert une autre façon de reprendre les rênes. Pas en fuyant, mais en apprenant à poser mes limites. Aujourd'hui, je suis apaisée. Je ne subis plus mes journées, je les choisis. »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--r-color)">C</div><div class="testi__name">Caroline</div></div>
+      </div>
+      <div class="testi__card reveal reveal-d1">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« J'ai longtemps pris sur moi dans un environnement toxique... jusqu'au jour où je suis tombée gravement malade. Grâce au Parcours F.I.E.R.T.É, j'ai enfin osé demander une mobilité, ce que je croyais impossible avant. J'ai repris le contrôle de ma vie professionnelle. »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--t-color)">J</div><div class="testi__name">Jocelyne</div></div>
+      </div>
+      <div class="testi__card reveal reveal-d2">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« Chaque semaine, j'ai des prises de conscience. En quelques semaines je me suis "retrouvée", je pose plus facilement des limites et je suis fière de moi ! On progresse rapidement, Victor-Alex est sans complaisance, mais avec bienveillance. »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--é-color)">M</div><div class="testi__name">Manuella</div></div>
+      </div>
+      <div class="testi__card reveal">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« J'ai dû apprendre à ne pas me voir à travers le regard des autres. J'ai beaucoup appris sur moi-même, à m'aimer, à être fière de moi et surtout à l'exprimer. C'est un accompagnement sans jugement qui m'a aidé à révéler la puissance que j'ignorais posséder. »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--i-color)">K</div><div class="testi__name">Kelly</div></div>
+      </div>
+      <div class="testi__card reveal reveal-d1">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« L'approche de Victor-Alex est profondément humaine. Il sait écouter et trouver les mots justes, ainsi que la stratégie pour débloquer une situation et nous assurer de sa faisabilité. Sa pédagogie est efficiente ! »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--f-color)">C</div><div class="testi__name">Carole</div></div>
+      </div>
+      <div class="testi__card reveal reveal-d2">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">« Ce programme m'a permis d'être en confiance et d'identifier le type de "vampires" en face de moi. J'ai appris à leur dire non en créant ma bulle de protection, ce qui m'a permis de ne plus avoir peur. C'est un vrai kit de survie. »</div>
+        <div class="testi__author"><div class="testi__avatar" style="background:var(--e-color)">M</div><div class="testi__name">Manuella</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="commencer">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title reveal reveal-d1">Choisis ton point d'entrée</h2>
+    </div>
+    <div class="doors__grid">
+      <div class="door reveal">
+        <div class="door__icon">🔬</div>
+        <div class="door__title">Diagnostic gratuit</div>
+        <div class="door__desc">3 minutes. 6 axes. Tu découvres immédiatement où le mode survie a frappé le plus fort + 3 actions concrètes.</div>
+        <a href="https://roue-fierte.vercel.app" target="_blank" class="btn btn--primary" style="font-size:.9rem;padding:.7rem 1.5rem;width:100%">Faire mon diagnostic</a>
+        <div class="door__tag" style="margin-top:1.2rem">Gratuit • 3 min</div>
+      </div>
+      <div class="door reveal reveal-d1">
+        <div class="door__icon">🎙</div>
+        <div class="door__title">Masterclass du dimanche</div>
+        <div class="door__desc">90 minutes en direct avec Victor-Alex. Le mécanisme du mode survie expliqué. Cas concrets. Chaque dimanche à 18h.</div>
+        <a href="#" class="btn btn--primary systeme-show-popup-23011663" style="font-size:.9rem;padding:.7rem 1.5rem;width:100%">Réserver ma place</a>
+        <div class="door__tag" style="margin-top:1.2rem">Gratuit • 90 min • Live</div>
+      </div>
+      <div class="door reveal reveal-d2">
+        <div class="door__icon">📞</div>
+        <div class="door__title">Appel Diagnostic 30 min</div>
+        <div class="door__desc">Un appel en visio pour ouvrir le capot ensemble. On regarde tes résultats F.I.E.R.T.É, on identifie les leviers.</div>
+        <a href="https://cal.com/victor-alex-anaclet-ngmsbj/30min" target="_blank" class="btn btn--primary" style="font-size:.9rem;padding:.7rem 1.5rem;width:100%">Réserver mon créneau</a>
+        <div class="door__tag" style="margin-top:1.2rem">Gratuit • 30 min • Visio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header__kicker reveal">Questions fréquentes</div>
+      <h2 class="section-header__title reveal reveal-d1">Ce que tu te demandes<br>(et c'est normal)</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item reveal"><div class="faq__q">C'est pour qui exactement ?</div><div class="faq__a">Pour les professionnels de 40-55 ans qui sentent que quelque chose ne tourne plus rond — fatigue chronique, irritabilité, perte de sens — mais qui ne peuvent pas se permettre de « tout plaquer ». Tu as des responsabilités, un crédit, une famille. Tu as besoin d'une solution qui fonctionne dans TA réalité.</div></div>
+      <div class="faq__item reveal reveal-d1"><div class="faq__q">C'est quoi la différence avec un coach classique ?</div><div class="faq__a">Un coach te dit « médite » et « lâche prise ». Moi, je t'explique POURQUOI ton amygdale déclenche des fausses alertes, POURQUOI ton cortex préfrontal n'arrive plus à prendre des décisions, et COMMENT recâbler ces circuits. C'est de la neuroscience appliquée, pas du développement personnel.</div></div>
+      <div class="faq__item reveal reveal-d2"><div class="faq__q">6 semaines, c'est réaliste ?</div><div class="faq__a">La neuroplasticité montre que 21 à 42 jours suffisent pour créer de nouveaux circuits neuronaux. Le programme F.I.E.R.T.É est calibré sur ces données. Tu ne vas pas « guérir » en 6 semaines — tu vas désactiver le mode survie et réactiver ta capacité à récupérer.</div></div>
+      <div class="faq__item reveal reveal-d3"><div class="faq__q">Faut-il quitter son travail ?</div><div class="faq__a">Non. C'est justement la « 3e voie ». Tu n'as pas besoin de démissionner ni de changer de vie. La méthode travaille sur TON système nerveux, pas sur ton employeur. 80% de nos accompagnés sont restés à leur poste — mais en ayant retrouvé leur énergie et leur capacité de décision.</div></div>
+      <div class="faq__item reveal reveal-d4"><div class="faq__q">Et si ça ne fonctionne pas pour moi ?</div><div class="faq__a">On mesure. La Roue F.I.E.R.T.É te donne un score précis AVANT le programme et APRÈS. Si ton score n'a pas progressé à l'issue des 6 semaines, on prolonge l'accompagnement ensemble jusqu'à ce que ça bouge. Ce n'est pas une promesse marketing — c'est un engagement mesurable. Je ne te demande pas de me croire. Je te demande de vérifier.</div></div>
+      <div class="faq__item reveal"><div class="faq__q">Combien ça coûte ?</div><div class="faq__a">Le diagnostic est gratuit. La masterclass du dimanche est gratuite. Le diagnostic 30 min en visio est gratuit. Le programme complet F.I.E.R.T.É Retrouvée sur 6 semaines est un investissement dont on discute en diagnostic — parce que le prix n'a de sens que quand tu sais exactement ce dont tu as besoin.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt final-cta" id="mc">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title reveal reveal-d1">Dimanche soir, 18h.<br><span class="accent">On ouvre le capot ensemble.</span></h2>
+    </div>
+    <p class="dim reveal reveal-d2" style="max-width:500px;margin:0 auto 1.5rem">90 minutes en direct. Le mode survie expliqué. Des outils concrets. Tes questions en live. Places limitées.</p>
+    <div class="countdown reveal reveal-d3" id="countdown">
+      <div class="countdown__block"><div class="countdown__num" id="cd-days">--</div><div class="countdown__label">Jours</div></div>
+      <div class="countdown__block"><div class="countdown__num" id="cd-hours">--</div><div class="countdown__label">Heures</div></div>
+      <div class="countdown__block"><div class="countdown__num" id="cd-mins">--</div><div class="countdown__label">Minutes</div></div>
+      <div class="countdown__block"><div class="countdown__num" id="cd-secs">--</div><div class="countdown__label">Secondes</div></div>
+    </div>
+    <a href="#" class="btn btn--primary reveal reveal-d4 systeme-show-popup-23011663" style="font-size:1.1rem;padding:1.1rem 3rem">🎙 Réserver ma place — Gratuit</a>
+    <p class="dim reveal" style="margin-top:1rem;font-size:.75rem">Tu recevras le lien Zoom par email. Replay disponible 48h.</p>
+  </div>
+</section>
+
+<div class="accent-line"></div>
+
+<footer class="footer">
+  <p class="footer__sig">« Je t'aide à <strong>durer</strong>, pas à tenir. » — Victor-Alex ANACLET</p>
+  <div class="footer__social">
+    <a href="mailto:victoralex@croissancepro.com">Me contacter par email</a>
+    <a href="https://www.linkedin.com/in/victor-alex-anaclet" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/pensezgagnant" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@v2a71" target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/share/1DdLM7AK8y/" target="_blank">Facebook</a>
+  </div>
+  <p class="footer__legal">F.I.E.R.T.É Retrouvée © 2026 — Protocole de Neuro-Restauration × Reconstruction professionnelle</p>
+</footer>
+
+<script>
+// Reveal on scroll
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// FAQ toggle
+document.querySelectorAll('.faq__q').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement;document.querySelectorAll('.faq__item').forEach(x=>{if(x!==i)x.classList.remove('open')});i.classList.toggle('open')})});
+
+// Countdown to next Sunday 18h Paris
+function getNextSunday18h(){const n=new Date(),p=new Date(n.toLocaleString('en-US',{timeZone:'Europe/Paris'}));let d=(7-p.getDay())%7;if(d===0&&p.getHours()>=18)d=7;const t=new Date(p);t.setDate(t.getDate()+d);t.setHours(18,0,0,0);return t}
+function tick(){const n=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Paris'})),t=getNextSunday18h(),df=t-n;if(df<=0)return;const d=Math.floor(df/864e5),h=Math.floor(df%864e5/36e5),m=Math.floor(df%36e5/6e4),s=Math.floor(df%6e4/1e3);document.getElementById('cd-days').textContent=d;document.getElementById('cd-hours').textContent=String(h).padStart(2,'0');document.getElementById('cd-mins').textContent=String(m).padStart(2,'0');document.getElementById('cd-secs').textContent=String(s).padStart(2,'0')}
+tick();setInterval(tick,1000);
+
+// Nav shrink
+window.addEventListener('scroll',()=>{document.querySelector('.nav').style.padding=window.scrollY>80?'.5rem 0':'.8rem 0'});
+</script>
+<script id="form-script-tag-23011663" src="https://www.zensales.fr/public/remote/page/38548973a5848d12aca3ced0cf9d3f60dcc054f5.js"></script>
+</body>
+</html>
